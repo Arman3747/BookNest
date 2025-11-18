@@ -1,4 +1,4 @@
-# picture ZZZ
+![BookNest](https://i.ibb.co/pjxD3J1t/Book-Nest-Home.png)
 
 # 📖 Minimal Library Management System - (BookNest)
 
@@ -6,7 +6,7 @@ A simple library management system to add, edit, delete, and borrow books, track
 
 ## Live Link
 
-- Please Visit [Blood Connect](https://bloodconnect-3e8aa.web.app/) !
+- Please Visit [BookNest Link add]() !
 
 ## Features
 
@@ -22,7 +22,7 @@ A simple library management system to add, edit, delete, and borrow books, track
 
 ---
 
-## Technology Stack
+### Technology Stack
 
 | **Layer**        |            **Technology** |
 | :--------------- | ------------------------: |
@@ -32,7 +32,32 @@ A simple library management system to add, edit, delete, and borrow books, track
 | Database         |        MongoDB + Mongoose |
 | Styling          |   Tailwind CSS and Shadcn |
 
-## npm packages
+---
+
+### Page List
+
+| Pages             | Functionalities                                              |
+| :---------------- | :----------------------------------------------------------- |
+| `/`               | Display a home page with a hero section, header, and footer. |
+| `/books`          | Displays a list of all books in tabular format.              |
+| `/books/:id`      | Detailed view of a single book’s information.                |
+| `/create-book`    | Form interface to add a new book to the system.              |
+| `/borrow-summary` | Displays an aggregated summary of all borrowed books.        |
+
+---
+
+### UI/UX
+
+- Minimalist UI
+  - Sleek and functional interface designed with Tailwind CSS and ShadCN UI components.
+- User Experience
+  - Intuitive navigation, clearly labeled actions, and straightforward, user-friendly forms.
+- Responsive Design
+  - Fully adaptive layout that works seamlessly across mobile, tablet, and desktop screens.
+
+---
+
+### npm packages
 
 - Uses [TypeScript](https://www.typescriptlang.org/) for type safety, improved code readability, and early error detection during development.
 - Uses [React](https://react.dev/) for building an interactive, fast, and component-based UI to manage books, borrowing, and summaries efficiently.
@@ -47,21 +72,31 @@ A simple library management system to add, edit, delete, and borrow books, track
 - Uses [Zod](https://zod.dev/) for runtime schema validation and ensuring request data integrity.
 - Uses [netlify](https://www.netlify.com/) to deploy the React TypeScript library system as a fast, secure, and fully static website, providing continuous deployment, global CDN hosting, and easy management of builds and updates.
 
-## Technologies Used
+---
+
+### Technologies Used
 
 - ![TypeScript](https://img.shields.io/badge/typescript-333333?logo=typescript&logoColor=3178C6)
-- ![]()
-<!-- - ![Express.js](https://img.shields.io/badge/Express.js-v5.01.00-155dfc?logo=express&logoColor=%23000000)
-- ![MongoDB](https://img.shields.io/badge/MongoDB-v6.20.00-155dfc?logo=mongodb&logoColor=%2347A248)
-- ![Mongoose.js](https://img.shields.io/badge/Mongoose.js-v8.19.02-155dfc?logo=mongoose&logoColor=%23880000)
+- ![React.js](https://img.shields.io/badge/React.js-v19.2.0-155dfc?logo=react&logoColor=%2361DAFB)
+- ![Redux.js](https://img.shields.io/badge/Redux.js-v7.9.6-155dfc?logo=redux&logoColor=%23764ABC)
+- ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4.1.17-155dfc?logo=tailwindcss&logoColor=%2306B6D4)
+- ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-v3.5.0-155dfc?logo=shadcnui&logoColor=%23000000)
+- ![React Hook Form](https://img.shields.io/badge/React_Hook_Form-v7.66.0-155dfc?logo=reacthookform&logoColor=%23EC5990)
+- ![date-fns](https://img.shields.io/badge/date_fns-v4.1.0-155dfc?logo=datefns&logoColor=%23770C56)
+- ![Lucide](https://img.shields.io/badge/Lucide-v0.553.0-155dfc?logo=lucide&logoColor=%23F56565)
+- ![React Router](https://img.shields.io/badge/React_Router-v7.9.6-155dfc?logo=reactrouter&logoColor=%23CA4245)
 - ![Zod](https://img.shields.io/badge/Zod-v4.1.12-155dfc?logo=zod&logoColor=%23408AFF)
-- ![.ENV](https://img.shields.io/badge/.ENV-v17.2.3-155dfc?logo=dotenv&logoColor=%23ECD53F)
-- ![Vercel](https://img.shields.io/badge/Vercel-333333?logo=vercel&logoColor=%23ffffff)
-- ![GitHub](https://img.shields.io/badge/GitHub-333333?logo=github&logoColor=%23ffffff) -->
+- ![Netlify](https://img.shields.io/badge/Netlify-333333?logo=netlify&logoColor=%2300C7B7)
+- ![git](https://img.shields.io/badge/git-333333?logo=git&logoColor=%23F05032)
+- ![GitHub](https://img.shields.io/badge/GitHub-333333?logo=github&logoColor=%23ffffff)
 
-## 🛠️ Installation & Setup Instructions
+---
 
-Follow the steps below to set up the **NextProduct** application locally:
+# 🛠️ Installation & Setup Instructions
+
+## Server Setup
+
+Follow the steps below to set up the **Library Management API** application locally:
 
 ---
 
@@ -100,20 +135,18 @@ Open http://localhost:5000 in your browser.
 
 ## **Route Summary**
 
-```md
 # API Route Summary
 
-| Route                                                              | Method | Description                       |
-| ------------------------------------------------------------------ | ------ | --------------------------------- |
-| `/api/books`                                                       | POST   | Create a new Book                 |
-| `/api/books`                                                       | GET    | Get All Books                     |
-| `/api/books?filter=NON_FICTION&sortBy=createdAt&sort=desc&limit=5` | GET    | Get All Books Based on the Search |
-| `/api/books/:bookId`                                               | GET    | Get Book by ID                    |
-| `/api/books/:bookId`                                               | PATCH  | Update Book                       |
-| `/api/books/:bookId`                                               | DELETE | Delete a Book                     |
-| `/api/borrow`                                                      | POST   | Borrow a Book                     |
-| `/api/borrow`                                                      | GET    | Borrowed Books Summary            |
-```
+| **Route**                                                          | **Method** |                   **Description** |
+| :----------------------------------------------------------------- | :--------: | --------------------------------: |
+| `/api/books`                                                       |    POST    |                 Create a new Book |
+| `/api/books`                                                       |    GET     |                     Get All Books |
+| `/api/books?filter=NON_FICTION&sortBy=createdAt&sort=desc&limit=5` |    GET     | Get All Books Based on the Search |
+| `/api/books/:bookId`                                               |    GET     |                    Get Book by ID |
+| `/api/books/:bookId`                                               |   PATCH    |                       Update Book |
+| `/api/books/:bookId`                                               |   DELETE   |                     Delete a Book |
+| `/api/borrow`                                                      |    POST    |                     Borrow a Book |
+| `/api/borrow`                                                      |    GET     |            Borrowed Books Summary |
 
 ## Deployment
 
@@ -123,5 +156,39 @@ Open http://localhost:5000 in your browser.
 4. Deploy the site. Live URL will be generated automatically.
 
 ---
+
+## Client Setup
+
+Follow the steps below to set up the **BookNest** application locally:
+
+---
+
+### 1. Clone the Repositories
+
+```bash
+git clone https://github.com/Arman3747/BookNest.git
+
+```
+
+---
+
+### 2. Setup
+
+```bash
+cd BookNest
+npm install
+```
+
+Then start the server:
+
+```bash
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+---
+
+## **Route Summary**
 
 ### Thank you for Reading!
