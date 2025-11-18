@@ -187,4 +187,37 @@ Open http://localhost:5173 in your browser.
 
 ---
 
+### Client Side Deployment on Netlify
+
+1. **Push the code to GitHub**  
+   Make sure your React TypeScript project is committed and pushed to a GitHub repository.
+
+2. **Login to Netlify**  
+   Go to [Netlify](https://www.netlify.com/) and click **"New Site from Git"**.
+
+3. **Connect your GitHub repository**  
+   Select the repository that contains your frontend code.
+
+4. **Set the build command and publish directory**
+
+   - **Build Command:**
+
+     ```bash
+     npm run build
+     ```
+
+   - **Publish Directory:**
+
+     ```
+     build
+     ```
+
+5. **Configure `_redirects` for React Router**  
+   If your app uses client-side routing, create a `_redirects` file inside the `public/` folder with the following content:
+   ```
+   /* /index.html 200
+   ```
+
+---
+
 ### Thank you for Reading!
