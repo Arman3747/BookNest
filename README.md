@@ -1,14 +1,20 @@
 ![BookNest](https://i.ibb.co/pjxD3J1t/Book-Nest-Home.png)
 
-# 📖 Minimal Library Management System - (BookNest)
+---
+
+# 📖 **Book**Nest - (Minimal Library Management System)
 
 A simple library management system to add, edit, delete, and borrow books, track availability, and view a borrow summary—built with React, TypeScript, and RTK Query for clean, real-time updates.
 
-## Live Link
+---
+
+### Live Link
 
 - Please Visit [BookNest Link add]() !
 
-## Features
+---
+
+### Features
 
 - View all books in a structured table with title, author, genre, ISBN, copies, and availability.
 - Create a new book with a form containing all essential fields (title, author, genre, ISBN, description, copies).
@@ -92,13 +98,11 @@ A simple library management system to add, edit, delete, and borrow books, track
 
 ---
 
-# 🛠️ Installation & Setup Instructions
+## 🛠️ Installation & Setup Instructions
 
-## Server Setup
+### Server Setup
 
 Follow the steps below to set up the **Library Management API** application locally:
-
----
 
 ### 1. Clone the Repositories
 
@@ -106,8 +110,6 @@ Follow the steps below to set up the **Library Management API** application loca
 git clone https://github.com/Arman3747/Library_Management_API.git
 
 ```
-
----
 
 ### 2. Setup
 
@@ -133,9 +135,7 @@ Open http://localhost:5000 in your browser.
 
 ---
 
-## **Route Summary**
-
-# API Route Summary
+### API Route Summary
 
 | **Route**                                                          | **Method** |                   **Description** |
 | :----------------------------------------------------------------- | :--------: | --------------------------------: |
@@ -148,7 +148,9 @@ Open http://localhost:5000 in your browser.
 | `/api/borrow`                                                      |    POST    |                     Borrow a Book |
 | `/api/borrow`                                                      |    GET     |            Borrowed Books Summary |
 
-## Deployment
+---
+
+### Server Deployment
 
 1. Push the code to GitHub.
 2. Connect your repository to [Vercel](https://vercel.com/).
@@ -157,11 +159,9 @@ Open http://localhost:5000 in your browser.
 
 ---
 
-## Client Setup
+### Client Setup
 
 Follow the steps below to set up the **BookNest** application locally:
-
----
 
 ### 1. Clone the Repositories
 
@@ -169,8 +169,6 @@ Follow the steps below to set up the **BookNest** application locally:
 git clone https://github.com/Arman3747/BookNest.git
 
 ```
-
----
 
 ### 2. Setup
 
@@ -188,7 +186,5 @@ npm run dev
 Open http://localhost:5173 in your browser.
 
 ---
-
-## **Route Summary**
 
 ### Thank you for Reading!
