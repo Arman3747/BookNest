@@ -10,7 +10,7 @@ A simple library management system to add, edit, delete, and borrow books, track
 
 ### Live Link
 
-- Please Visit [BookNest Link add]() !
+- Please Visit [BookNest](https://newbooknest.netlify.app/) !
 
 ---
 
@@ -175,6 +175,15 @@ git clone https://github.com/Arman3747/BookNest.git
 ```bash
 cd BookNest
 npm install
+```
+
+Create a `.env.local` file in the root of the folder and add the following:
+
+```env
+##Server_Credential
+VITE_BACKEND_URL=http://localhost:5000/api
+or,
+VITE_BACKEND_URL=BackEnd_Server_url
 ```
 
 Then start the server:

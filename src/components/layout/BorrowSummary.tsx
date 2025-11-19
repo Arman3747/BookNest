@@ -37,7 +37,7 @@ const BorrowSummary = () => {
             </TableHeader>
             <TableBody>
               {!isLoading &&
-                data.data.map((borrow, index: number) => (
+                data.data.map((borrow : any, index: number) => (
                   <TableRow key={index}>
                     <TableCell>{index + 1}</TableCell>
                     <TableCell>{borrow.book.title}</TableCell>

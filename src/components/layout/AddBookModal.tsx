@@ -25,6 +25,7 @@ import { Switch } from "../ui/switch";
 import { useState } from "react";
 import { useAddNewBookMutation } from "@/redux/api/baseApi";
 import { useNavigate } from "react-router";
+import { toast } from "sonner"
 
 export function AddBookModal() {
   const [open, setOpen] = useState(false);
@@ -43,17 +44,24 @@ export function AddBookModal() {
 
   const [createBook] = useAddNewBookMutation();
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    // console.log(data);
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    // // console.log(data);
 
-    const res = createBook(data).unwrap;
-    // console.log("inside data", res);
+    // const res = createBook(data).unwrap;
+    // // console.log("inside data", res);
 
-    setOpen(false);
-    form.reset();
+    // setOpen(false);
+    // form.reset();
 
-    // redirect
-    navigate("/books");
+    // // redirect
+    // navigate("/books");
+    try {
+      await createBook(data).unwrap();
+      toast.success("Book created successfully!");
+      navigate("/books");
+    } catch (error) {
+      toast.error("Failed to create book");
+    }
   };
 
   return (

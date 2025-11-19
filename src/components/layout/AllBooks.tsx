@@ -24,6 +24,8 @@ const AllBooks = () => {
     refetchOnMountOrArgChange: true,
     refetchOnReconnect: true,
   });
+  console.log(data);
+  // const books = data?.data || [];
 
   const [deleteBook] = useDeleteBookMutation();
 
@@ -39,6 +41,8 @@ const AllBooks = () => {
   if (isLoading) {
     return <p>Loading...</p>;
   }
+
+  // console.log(data);
 
   return (
     <section>
@@ -76,7 +80,9 @@ const AllBooks = () => {
                     <TableCell>{book.genre}</TableCell>
                     <TableCell>{book.isbn}</TableCell>
                     <TableCell>{book.copies}</TableCell>
-                    <TableCell>{book.available ? "Available" : "Unavailable"}</TableCell>
+                    <TableCell>
+                      {book.available ? "Available" : "Unavailable"}
+                    </TableCell>
                     <TableCell className="flex justify-center items-center">
                       <Link to={`/books/${book._id}`}>
                         <Button className="mr-2">

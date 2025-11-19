@@ -1,11 +1,10 @@
-import React from 'react';
 import { Outlet, useNavigation } from 'react-router';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Root = () => {
 
-    // const { state } = useNavigation();
+    const { state } = useNavigation();
 
     return (
         <div className='max-w-7xl mx-auto'>
@@ -15,8 +14,8 @@ const Root = () => {
             </header>
 
             <main className='min-h-screen mx-4'>
-                {/* {state == "loading" ? <Loading></Loading> : <Outlet></Outlet>} */}
-                <Outlet></Outlet>
+                {state == "loading" ? <p>Loading...</p>: <Outlet></Outlet>}
+                {/* <Outlet></Outlet> */}
             </main>
 
             <footer>

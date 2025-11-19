@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   useGetSingleBookQuery,
   useAddNewBorrowMutation,
@@ -37,6 +37,7 @@ type BorrowBookModalProps = {
 
 export function BorrowBookModal({ id }: BorrowBookModalProps) {
   const [open, setOpen] = useState(false);
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
   const navigate = useNavigate();
   const { data, isLoading } = useGetSingleBookQuery(id);
 
@@ -62,7 +63,7 @@ export function BorrowBookModal({ id }: BorrowBookModalProps) {
 
     setOpen(false);
     form.reset();
-
+    setDate(new Date());
     // redirect
     navigate("/borrow-summary");
   };
@@ -146,12 +147,12 @@ export function BorrowBookModal({ id }: BorrowBookModalProps) {
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
                         mode="single"
-                        selected={field.value}
+                        selected={date}
                         onSelect={field.onChange}
                         // disabled={(date) =>
                         //   date > new Date() || date < new Date("1900-01-01")
                         // }
-                        initialFocus
+                        // initialFocus
                       />
                     </PopoverContent>
                   </Popover>
